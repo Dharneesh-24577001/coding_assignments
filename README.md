@@ -16,4 +16,5 @@ The provided pipeline performs the following tasks:
 The full command to execute the script is as follows:
 
 **bash**
+
 zcat data/q1_data.tsv.gz | awk 'NR==1||/ENSG/' | python3 collect.py data/to_select.tsv > newfile.tsv
