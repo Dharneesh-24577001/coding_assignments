@@ -38,3 +38,26 @@ To execute the script, use the following command:
 
 ```bash
 $ cat data/q2_data.tsv | Rscript line_plot.R "different_clusters.png" "Relative from center [bp]" "Enrichment over Mean" "MNase fragment profile"
+```
+
+
+## Q3: Merging Multiple Files (R + Linux Command)
+
+This script merges multiple files listed in a specified input file, aligning them by a common identifier (the first column in each file).The merged result is then saved to a specified output file.
+
+### Overview
+
+The R script performs the following tasks:
+1. **Reads** a list of data file names from an input file (`data/list_q3.tsv`), where each line contains the path to a data file.
+2. **Loads** each listed data file into a separate data frame.
+3. **Renames** the columns in each data frame to sequential integers (`1`, `2`, etc.), ensuring consistency across files.
+4. **Merges** all data frames by the first column (`1`) using an inner join, retaining only rows with matching values in this column across all files.
+5. **Writes** the final merged data to an output file (`data/join_output.tsv`).
+
+### Command to Run the Script
+
+The full command to execute the script is as follows:
+
+```bash
+Rscript merge_multiple_files.R data/list_q3.tsv data/join_output.tsv
+```
