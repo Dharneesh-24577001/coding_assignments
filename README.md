@@ -61,3 +61,25 @@ The full command to execute the script is as follows:
 ```bash
 Rscript merge_multiple_files.R data/list_q3.tsv data/join_output.tsv
 ```
+
+
+## Q4: Label with quantiles (Python)
+
+This Python script separates a given data file into specified quantiles. The number of quantiles is provided as a command-line argument. The script uses the `pandas` library to load the data, calculate the quantiles, and display the values along with their corresponding quantile ranges.
+
+### Overview
+
+The Python script performs the following tasks:
+1. **Reads** a tab-separated (TSV) file from the input argument (`data/q4_data.tsv`).
+2. **Accepts** a second argument specifying the number of quantiles (`'4'` for example).
+3. **Calculates** the specified number of quantiles for the data.
+4. **Labels** the quantiles as `q1`, `q2`, etc., and assigns each data value to a corresponding quantile.
+5. **Displays** the values along with their quantile labels and ranges.
+
+### Command to Run the Script
+
+The full command to execute the script is as follows:
+
+```bash
+python3 quantile.py data/q4_data.tsv '4'
+
