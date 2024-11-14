@@ -2,7 +2,7 @@
 
 ## Q1:Selecting lines from stdin (Python Code + Linux Command)
 
-This project involves a script that efficiently filters gene data from a large compressed file based on a list of selected IDs. The script leverages bash and a Python program to identify and output lines containing specific gene identifiers, using a pipeline that helps with large datasets.
+This assignment involves a script that efficiently filters gene data from a large compressed file based on a list of selected IDs. The script leverages bash and a Python program to identify and output lines containing specific gene identifiers, using a pipeline that helps with large datasets.
 
 ## Overview
 
