@@ -18,3 +18,25 @@ The full command to execute the script is as follows:
 **bash**
 
 zcat data/q1_data.tsv.gz | awk 'NR==1||/ENSG/' | python3 collect.py data/to_select.tsv > newfile.tsv
+
+
+
+##Q2: Plotting a group of lines ( R + Linux Command)
+
+# Line Plot Generation Using R and ggplot2
+
+This script generates a line plot based on tab-separated input data, making use of the `ggplot2` library in R. The plot displays data points connected by lines, grouped by category.
+## Overview
+
+The R script performs the following tasks:
+1.  Reads data from the standard input, which is piped from a file or another command (`cat data/q2_data.tsv`).
+2. Accepts command-line arguments for output filename, x-axis label, y-axis label, and plot title (`Rscript line_plot.R "different_clusters.png" "Relative from center [bp]" "Enrichment over Mean" "MNase fragment profile"`).
+3. Plots the data using `ggplot2`, distinguishing between different categories with color.
+4. Saves the resulting plot as a PNG image file named after the argument (`"different_clusters.png"`).
+
+### Command to Run the Script
+
+To execute the script, use the following command:
+
+```bash
+$ cat data/q2_data.tsv | Rscript line_plot.R "different_clusters.png" "Relative from center [bp]" "Enrichment over Mean" "MNase fragment profile"
