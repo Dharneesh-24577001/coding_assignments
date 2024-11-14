@@ -21,11 +21,10 @@ zcat data/q1_data.tsv.gz | awk 'NR==1||/ENSG/' | python3 collect.py data/to_sele
 
 
 
-##Q2: Plotting a group of lines ( R + Linux Command)
-
-# Line Plot Generation Using R and ggplot2
+## Q2: Plotting a group of lines ( R + Linux Command)
 
 This script generates a line plot based on tab-separated input data, making use of the `ggplot2` library in R. The plot displays data points connected by lines, grouped by category.
+
 ## Overview
 
 The R script performs the following tasks:
