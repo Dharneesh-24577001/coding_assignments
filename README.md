@@ -36,5 +36,5 @@ The R script performs the following tasks:
 
 To execute the script, use the following command:
 
-``bash
+```bash
 $ cat data/q2_data.tsv | Rscript line_plot.R "different_clusters.png" "Relative from center [bp]" "Enrichment over Mean" "MNase fragment profile"
