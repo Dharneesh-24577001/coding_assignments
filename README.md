@@ -7,9 +7,9 @@ This project involves a script that efficiently filters gene data from a large c
 ## Overview
 
 The provided pipeline performs the following tasks:
-1. Decompresses a `.gz` compressed file containing gene data.
-2. Filters the decompressed data to include only lines that contain certain identifiers.
-3. Outputs the filtered data to a new file.
+1. `zcat data/q1_data.tsv.gz`  Decompresses a `.gz` compressed file containing gene data.
+2. `awk 'NR==1||/ENSG/'` Filters the decompressed data to include only lines that contain certain identifiers(*ENSG in this case*).
+3. `python3 collect.py data/to_select.tsv > newfile.tsv` Outputs the filtered data to a new file.
 
 ### Command to Run the Code
 
